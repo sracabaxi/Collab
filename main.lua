@@ -1,5 +1,4 @@
-local game = require("game")
-
+local sceneManager = require("sceneManager")
 
 --variaveis locais
 local gameScene
@@ -13,7 +12,7 @@ function love.load()
 	display.height = love.graphics.getHeight()
 	
 	--cria uma nova cena
-	gameScene = game.new()
+	gameScene = sceneManager.new("game")
 	
 	timeSeconds = 0
 	
