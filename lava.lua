@@ -4,12 +4,12 @@ function love.load()
 	display = {
 	width = love.graphics.getWidth(),
 	height = love.graphics.getHeight()}}
-	Lava.lava = {x = 0, y = Lava.display.height * 0.80}
+	Lava.lava = {x = 0, y = Lava.display.height * 0.80, speed = 50}
 end
 
 function love.update(dt)
 	
-	Lava.lava.y = Lava.lava.y + 75
+	Lava.lava.y = Lava.lava.y - Lava.lava.speed * dt
 	
 end
 
